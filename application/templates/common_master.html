@@ -1,0 +1,281 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Itech Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@700&family=Coda+Caption:wght@800&family=Covered+By+Your+Grace&family=Poppins:wght@200&family=Roboto:ital,wght@0,900;1,700&family=Slackey&family=Titan+One&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Caveat:wght@700&family=Coda+Caption:wght@800&family=Covered+By+Your+Grace&family=Merriweather:wght@700&family=Patua+One&family=Poppins:wght@200&family=Roboto:ital,wght@0,900;1,700&family=Slackey&family=Titan+One&display=swap"
+    rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Aboreto&family=Archivo+Black&family=Bebas+Neue&family=Caveat:wght@700&family=Coda+Caption:wght@800&family=Covered+By+Your+Grace&family=Lato:wght@700&family=Merriweather:wght@700&family=Patua+One&family=Roboto:ital,wght@0,900;1,700&family=Slackey&family=Sofia+Sans+Condensed:wght@300&family=Source+Serif+Pro:wght@300&family=Titan+One&display=swap"
+    rel="stylesheet">
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+  <script src="https://kit.fontawesome.com/0000000000.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="{% static 'css/masters.css' %}" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <style>
+    .toper {
+
+      display: flex;
+      justify-content: space-around;
+      background-color: #000000;
+      height: 50px;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+
+    }
+
+    .toper span {
+      color: #ff5e14;
+      background-color: black;
+      padding-top: 15px;
+      font-size: 15px;
+
+
+    }
+
+    .span3 {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .span3 a {
+      font-size: 19px;
+      padding-left: 50%;
+
+    }
+
+    .span3 .fa-twitter {
+      padding-top: 4px;
+    }
+
+    span a i {
+      color: #ffffff;
+    }
+
+    @media only screen and (max-width: 767px) {
+
+      .toper {
+        display: none;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="toper">
+    <span class="span1">+91 8078962762</span>
+    <span class="span2">Makkolath Line, Calicut</span>
+    <span class="span3">
+      <a href="https://www.facebook.com/profile.php?id=100090492364872"><i
+          class="fab fa-facebook-f facebook-bg"></i></a>
+      <a href="https://twitter.com/itechacademy32"><i class="fab fa-twitter twitter-bg"></i></a>
+      <a href="https://instagram.com/__.itechacademy._?igshid=NTc4MTIwNjQ2YQ=="><i
+          class="bi bi-instagram instagram-bg"></i></a>
+      <a href="https://www.linkedin.com/in/itech-academy-906224276/"><i class="bi bi-linkedin linkedin-bg"></i></a>
+
+    </span>
+  </div>
+
+  <header>
+    <nav class=" navbar-light sticky-top">
+      <a href="{% url 'common:index' %}" id="logo"><img src="{% static 'image/logo124.png' %}" alt=""></a>
+      <i class="fas fa-bars" id="ham-menu"></i>
+      <ul id="nav-bar">
+        <li>
+          <a href="{% url 'common:index' %}">Home</a>
+        </li>
+        <li>
+          <a href="{% url 'common:aboutus' %}">AboutUs</a>
+        </li>
+
+
+        <li>
+          <a href="{% url 'common:service' %}">Services</a>
+        </li>
+        <li>
+          <a style="color: #ff5e14;" href="{% url 'common:course' %}">Courses</a>
+        </li>
+        <li>
+          <a href="{% url 'common:gallery' %}">Gallery</a>
+        </li>
+        <li>
+          <a href="{% url 'common:contact' %}">ContactUs</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Script -->
+  <script src="{% static 'js/script.js' %}"></script>
+
+  {% block content %}
+
+  {% endblock %}
+
+  <footer class="footer-section">
+    <div class="container">
+      <div class="footer-cta pt-5 pb-5">
+        <div class="row">
+          <div class="col-xl-4 col-md-4 mb-30">
+            <div class="single-cta">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="cta-text">
+                <h4>Find us</h4>
+                <span>Makkolath Line,Opp: Cornation theatre</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-4 mb-30">
+            <div class="single-cta">
+              <i class="fas fa-phone"></i>
+              <div class="cta-text">
+                <h4>Call us</h4>
+                <span>+91 8078962762</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-4 mb-30">
+            <div class="single-cta">
+              <i class="far fa-envelope-open"></i>
+              <div class="cta-text">
+                <h4>Mail us</h4>
+                <span>itechkerala@gamil.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-content pt-5 pb-5">
+        <div class="row">
+          <div class="col-xl-4 col-lg-4 mb-50">
+            <div class="footer-widget">
+              <div class="footer-logo">
+                <a href="index.html"><img src="{% static 'image/logo124.png' %}" class="img-fluid" alt="logo"></a>
+              </div>
+              <div class="footer-text">
+                <p>Itech Academy aims at uplifting the living standard of the world by providing a passionate career for
+                  everyone.
+                  We promise complete job satisfaction by fetching the right career.
+                  Hence, there arises no question of mental stress or work pressure.</p>
+              </div>
+              <div class="footer-social-icon">
+                <h3>Follow Us</h3>
+                <a href="https://www.facebook.com/profile.php?id=100090492364872"><i
+                    class="fab fa-facebook-f facebook-bg"></i></a>
+                <a href="https://twitter.com/itechacademy32"><i class="fab fa-twitter twitter-bg"></i></a>
+                <a href="https://instagram.com/__.itechacademy._?igshid=NTc4MTIwNjQ2YQ=="><i
+                    class="bi bi-instagram instagram-bg"></i></a>
+                <a href="https://www.linkedin.com/in/itech-academy-906224276/"><i
+                    class="bi bi-linkedin linkedin-bg"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+            <div class="footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Useful Links</h3>
+              </div>
+              <ul>
+                <li><a href="{% url 'common:index' %}">Home</a></li>
+                <li><a href="{% url 'common:aboutus' %}">About us</a></li>
+                <li><a href="{% url 'common:course' %}">Courses</a></li>
+                <li><a href="{% url 'common:service' %}">Our Services</a></li>
+                <li><a href="{% url 'common:contact' %}">Contact us</a></li>
+                <li><a href="{% url 'common:gallery' %}">Gallery</a></li>
+
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+            <div class="footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Subscribe</h3>
+              </div>
+              <div class="footer-text mb-25">
+                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+              </div>
+              <div class="subscribe-form">
+                <form action="#">
+                  
+                  <input type="text" name="email" placeholder="Email Address">
+                  <button><i class="fab fa-telegram-plane"></i></button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="copyright-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+            <div class="copyright-text">
+              <p>Copyright &copy; 2018, All Right Reserved <a href="https://codepen.io/anupkumar92/">Itech</a></p>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+            <div class="footer-menu">
+              <ul>
+                <li><a href="{% url 'common:index' %}">Home</a></li>
+                <li><a href="{% url 'common:aboutus' %}">About us</a></li>
+                <li><a href="{% url 'common:contact' %}">Contact</a></li>
+                <li><a href="{% url 'common:service' %}">Services</a></li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+
+</body>
+
+
+</html>

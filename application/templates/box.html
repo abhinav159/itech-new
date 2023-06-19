@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+body{
+    margin: 0;
+}
+
+.feature--image img {
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .33);
+}
+
+.feature-pair:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.feature-pair {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.feature {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.feature--text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+
+  .features h4 {
+    font-weight: 700;
+    padding: 10px 0;
+    margin: 0;
+    line-height: 27px;
+    color: #ff5e14;
+  font-size: 40px;
+  text-align: center;
+
+  }
+  .features p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 28.8px;
+    margin-top: 5px;
+    text-align: initial;
+    font-family: 'Poppins', sans-serif;
+
+  }
+.contain{
+    background: #151414 ;
+}
+.contain h2{
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    color: #ff5e14;
+    font-weight: 700;
+    margin-top: 0;
+    padding-top:50px;
+
+}
+@media screen and (min-width: 1024px) {
+
+    .feature-pair {
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+}
+@media screen and (min-width: 900px) {
+
+    .feature-pair {
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+.feature h4{
+        font-size: 32px;
+    }
+
+
+
+}
+@media screen and (max-width: 575px) {
+
+    .feature h4{
+        font-size: 26px;
+    }
+
+}
+
+    </style>
+</head>
+<body>
+    <main class="contain">
+        <h2>Our Process</h2>
+        <section class="features">
+          <section class="feature-pair">
+            <article class="feature feature--image">
+              <img src="https://images.pexels.com/photos/8199166/pexels-photo-8199166.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Feature Screenshot" width="90%" height="auto" />
+            </article>
+            <article class="feature feature--text">
+              <h4>1. Discover Passion</h4>
+              <p>Identify what you like to do or what kindles your interest.</p>
+            </article>
+          </section>
+          <section class="feature-pair">
+            <article class="feature feature--image">
+              <img src="https://images.pexels.com/photos/5428267/pexels-photo-5428267.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Feature Screenshot" width="90%" height="auto" />
+            </article>
+            <article class="feature feature--text">
+              <h4>2. Analyze Your Aptitude
+      </h4>
+              <p>Map careers that fit your Aptitude, Personality & Intelligence Orientation.</p>
+            </article>
+          </section>
+          <section class="feature-pair">
+            <article class="feature feature--image">
+              <img src="https://images.pexels.com/photos/5212665/pexels-photo-5212665.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Feature Screenshot" width="90%" height="auto" />
+            </article>
+            <article class="feature feature--text">
+              <h4>3. Explore Opportunities</h4>
+              <p>Discover the growing careers around the world.</p>
+            </article>
+          </section>
+          <section class="feature-pair">
+            <article class="feature feature--image">
+              <img src="https://images.pexels.com/photos/8613313/pexels-photo-8613313.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Feature Screenshot" width="90%" height="auto" />
+            </article>
+            <article class="feature feature--text">
+              <h4>4. Create the focus list</h4>
+              <p>Shortlist the top careers that complement your Passion, Aptitude & Opportunities.</p>
+            </article>
+          </section>
+          <section class="feature-pair">
+            <article class="feature feature--image">
+              <img src="https://images.pexels.com/photos/9242845/pexels-photo-9242845.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Feature Screenshot" width="90%" height="auto" />
+            </article>
+            <article class="feature feature--text">
+              <h4>5. Develop the Action Plan</h4>
+              <p>Build a plan that covers the course, college, entrance tests, and admission procedure.</p>
+            </article>
+          </section>
+        </section>
+      </main>
+</body>
+</html>

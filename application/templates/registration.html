@@ -1,0 +1,111 @@
+{% extends 'common_master.html' %}
+{% load static %}
+{% block content %}
+
+<section class="reg-container">
+  <header class="reg-head">Registration Form</header>
+  <form action="{% url 'common:registration' %}" class="form" method="POST">
+    {% csrf_token %}
+    <div class="input-box">
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter full name" required name="full_name" id="full_name" />
+      <b id="label1"></b>
+    </div>
+    <div class="input-box">
+      <label>Email Address</label>
+      <input type="text" placeholder="Enter email address" required name="email" id="email" />
+      <b id="label2"></b>
+    </div>
+    <div class="column">
+      <div class="input-box">
+        <label>Phone Number</label>
+        <input type="number" placeholder="Enter phone number" required name="phone_number" id="phone_number" />
+        <b id="label3"></b>
+      </div>
+      <div class="input-box">
+        <label>Birth Date</label>
+        <input type="date" placeholder="Enter birth date" required name="dob" />
+      </div>
+    </div>
+    <!-- <div class="gender-box"> -->
+    <div class="select-box">
+      <select name="gender">
+        <option hidden>Gender</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+    </div>
+
+    <!-- </div> -->
+    <div class="input-box address">
+      <label>Address</label>
+      <input type="text" placeholder="Enter street address" required name="address1" />
+      <input type="text" placeholder="Enter street address line 2" required name="address2" />
+      <div class="column">
+        <div class="select-box">
+          <select name="select">
+            <option hidden>Course</option>
+            <option>FOUNDATION LEVEL</option>
+            <option>ADVANCED LEVEL</option>
+          </select>
+        </div>
+        <input type="text" placeholder="Highest qualification" required name="qualification" />
+      </div>
+      <div class="column">
+        <input type="number" placeholder="Parent Number" name="parent_number" required />
+        <input type="number" placeholder="Enter postal code" required name="postal" />
+      </div>
+    </div>
+    <button onclick="formvalidation()">Submit</button>
+  </form>
+  <div class="">
+    {% for message in messages %}
+    <span> {{message}}</span>
+    {% endfor %}
+  </div>
+</section>
+<script>
+  function formvalidation() {
+    first_name = document.getElementById("full_name").value
+    email = document.getElementById("email").value
+    phone_number = document.getElementById("phone_number").value
+    validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    status = 0
+
+    if (first_name == "") {
+      document.getElementById("label1").innerHTML = 'Username Cant Be Null'
+      document.getElementById("label1").style.color = 'red'
+      status = 1
+    }
+    else {
+      document.getElementById("label1").innerHTML = ""
+    }
+
+    if (email.match(validRegex)) {
+      document.getElementById("label2").innerHTML = ""
+
+    }
+    else {
+
+      document.getElementById('label2').innerHTML = "incorrect email format"
+      document.getElementById("label2").style.color = 'red'
+      document.getElementById("first_name").focus()
+      document.getElementById("email").setAttribute('class', "error")
+      status = 1
+
+    }
+    if (length(String(phone_number)) != 10) {
+      document.getElementById("label3").innerHTML = 'should be 10 number'
+      document.getElementById("label3").style.color = 'red'
+      status = 1
+    }
+    else {
+      document.getElementById("label3").innerHTML = ""
+    }
+    if (status == 1) {
+      return false
+    }
+  }
+</script>
+{% endblock %}

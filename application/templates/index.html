@@ -1,0 +1,423 @@
+{% extends 'common_master.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<div class="landingpage">
+  <div class="box">
+    <div class="infobox">
+      <p class="infobox-boldtext" style="font-family: Poppins !important; ">YOUR CAREER <br> TO NEXT LEVEL...</p>
+      <p class="infobox-slimtext">
+        Touching Lives Transforming Society!!!
+      </p>
+      <div class="infobox-btnwrapper">
+        <a href="{% url 'common:gallery' %}"><button class="infobox-explorebtn selected">Explore</button></a>
+        <a href="{% static 'pdf/itech brouchure.pdf' %}"><button class="infobox-createbtn">Brouchure</button></a>
+      </div>
+    </div>
+    <div class="display">
+      <div class="display-nft">
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2000">
+              <img src="{% static 'image/50.png' %}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="1000">
+              <img src="{% static 'image/100.png' %}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="{% static 'image/1000.png' %}" class="d-block w-100"
+                alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- about us -->
+<section class="about">
+  <h1>
+    ABOUT US
+    <br>
+    <img src="https://image.ibb.co/nk616F/Layer_1_copy_21.png" width="47" height="11" align="center">
+  </h1>
+  <article>
+    <p>Itech academy is a leading career-directing institute that supports students in their journey of reaching their
+      ultimate life goal. We have a team of expert career counsellors, who help the students in fulfilling their dreams.
+      Apart from including aptitude testing, educational counselling, and career guidance, we also provide psychometric
+      sessions to realise the inner talent of each student.Our team also helps the students to know about the
+      possibilities and scope of various courses, thus supporting them to unknot the confusions in their career.A team
+      of career counsellors will help the students to realise the strengths, interests, and abilities of students.
+    </p>
+  </article>
+  <div class="social_icons">
+    <div class="square">
+      <div class="icons">
+        <a href="https://www.facebook.com/profile.php?id=100090492364872"><i class="fa fa-facebook"
+            aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="square">
+      <div class="icons">
+        <a href="https://www.youtube.com/channel/UC3Zghn4NHcw4jE-cMXLz5rw"><i class="fa fa-youtube"
+            aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="square">
+      <div class="icons">
+        <a href="https://twitter.com/itechacademy32"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="square">
+      <div class="insta-icons">
+        <a href="https://instagram.com/__.itechacademy._?igshid=NTc4MTIwNjQ2YQ=="><i class="bi bi-instagram"
+            aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+<!-- end about -->
+
+
+<section class="courses">
+  <h1 class="heading">
+    Courses
+    <br>
+    <img src="https://image.ibb.co/nk616F/Layer_1_copy_21.png" width="47" height="11" align="center">
+  </h1>
+  <article>
+    <p class="para">Itech academy is a leading career-directing institute that supports students in their journey of
+      reaching their ultimate life goal. We have a team of expert career counsellors, who help the students in
+      fulfilling their dreams. Apart from including aptitude testing, educational counselling, and career guidance, we
+      also provide psychometric sessions to realise the inner talent of each student.Our team also helps the students to
+      know about the possibilities and scope of various courses, thus supporting them to unknot the confusions in their
+      career.A team of career counsellors will help the students to realise the strengths, interests, and abilities of
+      students.
+    </p>
+  </article>
+
+  <div class="cards-wrapper">
+    {% for card in course_card %}
+    <div class="card-grid-space">
+      <a class="card" href="{% url 'common:course'%}" style="--bg-img: url({{card.image.url}})">
+        <div>
+          <h1>{{card.heading}}</h1>
+          <p>{{card.para}}</p>
+          <div class="date">{{card.date}}</div>
+          <div class="tags">
+            <div class="tag">Know More</div>
+          </div>
+        </div>
+      </a>
+    </div>
+    {% endfor %}
+    
+    <!-- https://images.unsplash.com/photo-1520839090488-4a6c211e2f94?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=38951b8650067840307cba514b554ba5&auto=format&fit=crop&w=1350&q=80 -->
+  </div>
+</section>
+<!-- end course -->
+
+<!-- process -->
+
+<main class="contain">
+  <h2>Our Process
+    <br>
+    <img src="https://image.ibb.co/nk616F/Layer_1_copy_21.png" width="47" height="11" align="center">
+
+  </h2>
+  <section class="features">
+    <section class="feature-pair">
+      <article class="feature feature--image">
+        <img src="https://images.pexels.com/photos/8199166/pexels-photo-8199166.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Feature Screenshot" width="90%" height="auto" />
+      </article>
+      <article class="feature feature--text">
+        <h4>1. Discover Passion</h4>
+        <p>Identify what you like to do or what kindles your interest.</p>
+      </article>
+    </section>
+    <section class="feature-pair">
+      <article class="feature feature--image">
+        <img src="https://images.pexels.com/photos/5428267/pexels-photo-5428267.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Feature Screenshot" width="90%" height="auto" />
+      </article>
+      <article class="feature feature--text">
+        <h4>2. Analyze Your Aptitude
+</h4>
+        <p>Map careers that fit your Aptitude, Personality & Intelligence Orientation.</p>
+      </article>
+    </section>
+    <section class="feature-pair">
+      <article class="feature feature--image">
+        <img src="https://images.pexels.com/photos/5212665/pexels-photo-5212665.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Feature Screenshot" width="90%" height="auto" />
+      </article>
+      <article class="feature feature--text">
+        <h4>3. Explore Opportunities</h4>
+        <p>Discover the growing careers around the world.</p>
+      </article>
+    </section>
+    <section class="feature-pair">
+      <article class="feature feature--image">
+        <img src="https://images.pexels.com/photos/8613313/pexels-photo-8613313.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Feature Screenshot" width="90%" height="auto" />
+      </article>
+      <article class="feature feature--text">
+        <h4>4. Create the focus list</h4>
+        <p>Shortlist the top careers that complement your Passion, Aptitude & Opportunities.</p>
+      </article>
+    </section>
+    <section class="feature-pair">
+      <article class="feature feature--image">
+        <img src="https://images.pexels.com/photos/9242845/pexels-photo-9242845.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Feature Screenshot" width="90%" height="auto" />
+      </article>
+      <article class="feature feature--text">
+        <h4>5. Develop the Action Plan</h4>
+        <p>Build a plan that covers the course, college, entrance tests, and admission procedure.</p>
+      </article>
+    </section>
+  </section>
+</main>
+
+<!-- end process -->
+
+<div class="modal" id="myModal">
+
+  <div class="sign-up-modal">
+    <div id="close-modal-button">
+    </div>
+
+
+    <form class="details" method="POST">
+      {% csrf_token %}
+      <div class="input-container">
+        <input class="col-sm-12 email-input with-placeholder" id="email" type="email" placeholder="Email"
+          name="email" />
+      </div>
+      <div class="input-container">
+        <input class="col-sm-12 username-input with-placeholder" id="username" type="text" placeholder="Name"
+          name="name" />
+      </div>
+      <div class="input-container">
+        <input class="col-sm-12 phone_number-input with-placeholder" id="phone_number" type="number"
+          placeholder="Phone Number" name="phone" />
+      </div>
+
+
+      <input id="sign-up-button" type="submit" value="Sign Up">
+
+
+    </form>
+  </div>
+
+
+
+</div>
+
+<style>
+  @import url(https://fonts.googleapis.com/css?family=Roboto:700,300);
+
+  .modal {
+    margin-top: 10%;
+
+
+  }
+
+  .sign-up-modal {
+    font-family: "Roboto", arial, sans-serif;
+    color: #fefefe;
+    border-style: solid;
+    border-width: 10px;
+    border-color: rgb(254, 254, 254);
+    border-radius: 10px 10px 10px 10px;
+    background-image: -moz-linear-gradient(-90deg, rgb(236, 111, 102) 0%, rgb(243, 161, 131) 100%);
+    background-image: -webkit-linear-gradient(-90deg, rgb(236, 111, 102) 0%, rgb(243, 161, 131) 100%);
+    background-image: -ms-linear-gradient(-90deg, rgb(236, 111, 102) 0%, rgb(243, 161, 131) 100%);
+    width: 90%;
+    min-width: 300px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 25px;
+  }
+
+  .sign-up-modal form {
+    margin: 0 auto;
+    animation-name: leftslide;
+
+    animation-duration: 0.8s;
+
+    text-align: center;
+  }
+
+  .sign-up-modal input::-webkit-input-placeholder {
+    color: #fefefe;
+    opacity: 1;
+  }
+
+  .sign-up-modal input:focus::-webkit-input-placeholder {
+    color: #111;
+    opacity: .5;
+    transition: all 0.3s ease;
+  }
+
+  .sign-up-modal .input-container {
+    margin: 10px;
+  }
+
+  .sign-up-modal input[type="email"],
+  .sign-up-modal input[type="text"],
+  .sign-up-modal input[type="number"],
+  .sign-up-modal input[type="submit"]:focus {
+    outline: 0;
+  }
+
+  .sign-up-modal input[type="email"]::placeholder {
+    text-transform: none !important;
+  }
+
+  .sign-up-modal input[type="email"] {
+    font-weight: 700;
+    width: 70%;
+    height: 40px;
+    text-align: center;
+    font-size: 1.4em;
+    border-width: 2px;
+    border-color: rgba(247, 247, 247, .3);
+    border-style: solid;
+    background: url('transparent');
+    margin-left: 10%;
+    text-transform: lowercase;
+    padding-top: 5px;
+  }
+
+
+  .sign-up-modal input[type="submit"] {
+    font-weight: 700;
+    font-size: 1.3em;
+    color: #111;
+    background: #fefefe;
+    box-shadow: 0px 4px 0px 0px #d26a60;
+    border-style: none;
+    margin: 25px 0 15px 0;
+    position: relative;
+    display: inline-block;
+    transition: all .1s linear;
+    width: 40%;
+    height: 40px;
+  }
+
+  .sign-up-modal input[type="submit"]:active {
+    box-shadow: 0 2px 0 #d26a60;
+    transform: translateY(3px);
+    -webkit-transform: translateY(3px);
+    -ms-transform: translateY(3px);
+  }
+
+
+  #username {
+    width: 60%;
+    height: 40px;
+    background: transparent;
+    border-width: 2px;
+    border-color: rgba(247, 247, 247, .3);
+    border-style: solid;
+    font-weight: 700;
+    font-size: 1.4em;
+    text-align: center;
+
+
+  }
+
+  #phone_number {
+    width: 50%;
+    height: 40px;
+    margin-top: 10px;
+    background: transparent;
+    border-width: 2px;
+    border-color: rgba(247, 247, 247, .3);
+    border-style: solid;
+    font-weight: 700;
+    font-size: 1.4em;
+    text-align: center;
+
+
+  }
+
+  .sign-up-modal #close-modal-button {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    float: right;
+    position: relative;
+    top: -33px;
+    left: 35px;
+    cursor: pointer;
+  }
+
+  .sign-up-modal #close-modal-button:before {
+    content: '\2716';
+    font-size: 2.5em;
+    position: relative;
+    top: 7px;
+    left: 10px;
+  }
+
+
+  @media only screen and (max-width: 500px) {
+    .sign-up-modal {
+      width: 70%;
+    }
+
+    .sign-up-modal input[type="email"] {
+
+      margin-left: 10%;
+    }
+
+    #username {
+      width: 90%;
+
+    }
+
+    #phone_number {
+      width: 90%;
+
+
+    }
+
+    .sign-up-modal input[type="email"] {
+      width: 90%;
+      margin-left: 0px;
+    }
+
+    .modal {
+      margin-top: 30%;
+    }
+
+
+
+  }
+
+  @media only screen and (max-width: 420px) {
+    .sign-up-modal input[type="email"] {
+
+      margin-left: 10%;
+    }
+
+    .sign-up-modal {
+      width: 70%;
+    }
+
+    .sign-up-modal input[type="email"] {
+      width: 90%;
+      margin-left: 0px;
+    }
+
+
+
+  }
+</style>
+
+
+
+{% endblock %}
